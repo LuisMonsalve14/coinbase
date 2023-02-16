@@ -1,0 +1,149 @@
+$color-principal:#0075FF;
+
+@mixin btn-base{
+    color: #FFFFFF;
+    background-color: $color-principal;
+    border: none;
+    border-radius: 0.25rem;
+
+
+}
+
+@mixin btn-base-sec{
+    background-color: transparent;
+    color: #000000;
+    border: none;
+    font-weight: 700;
+   
+    
+}
+
+.container{
+    margin-top: 1rem;
+}
+.btn-main{
+    @include btn-base();
+    color: #FFFFFF;
+    padding: 0.5rem 1.5rem;
+    &:hover{
+        background-color: #FFFFFF;
+        color:$color-principal;
+        border: 1px solid $color-principal;
+        
+    }
+
+    &-s{
+
+        @include btn-base();
+        padding: 0.25rem 1.5rem;
+        font-size: 0.75rem;
+        &:hover{
+            background-color: #FFFFFF;
+            color:$color-principal;
+            border: 1px solid $color-principal;
+            
+        }
+        
+
+    }
+
+
+}
+
+.btn-sec{
+    @include btn-base-sec();
+    
+    &-s{
+        @include btn-base-sec();
+        font-size: 0.75rem;
+
+        &:hover{
+            color: #00000099;
+        }
+
+    }
+}
+
+.main-menu{
+    margin-bottom: 0;
+      li {
+         list-style: none;
+        display: inline;
+        color: #000000;
+        font-weight: bold;
+        margin-right: 2rem;
+       
+        
+        a{
+            color: #000000;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+
+
+        }
+    }
+}
+
+.icon-sm{
+    
+   
+    i {
+        
+        padding:0.35rem 0.65rem;
+        border-radius: 50% ;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);        
+        color: $color-principal;
+        
+    }
+}
+
+.benefits{
+    display: flex;
+    flex-direction: column;
+    width: 21.5rem;
+    text-align: center;
+    .icon{
+        color: $color-principal;
+        font-size: 5rem;
+        margin-bottom: 2rem;
+        
+
+    }
+    .description-benefits{
+        .description-benefits-tittle{
+            
+            font-weight: bold;
+
+        }
+        .description-benefits-text{
+            color: #00000099;
+
+            
+        }
+    }
+    .cta{
+        text-decoration: none;
+        margin-top: 3rem;
+        color: $color-principal;
+    }
+}
+
+
+.icon-des{
+    display: inline-block;
+    text-align: center;
+   
+    i{
+        font-size: 5rem;
+        color: $color-principal;
+        margin-bottom: 0;
+    }
+
+    .onboarding-tittle{
+        font-weight:700;
+
+    }
+}

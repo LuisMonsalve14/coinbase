@@ -1,0 +1,262 @@
+@use "componentes";
+
+@mixin section-display{
+    width: 100%;
+    max-width: 992px;
+    padding: 3rem;
+    margin: auto;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    padding: 0;
+    margin: 0;
+   
+    
+  
+}
+
+.nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    border-bottom:  1px solid #0000004D;
+}
+
+.sec-home{
+    @include section-display();
+    display: flex;
+    align-items: center;
+    
+   
+    .home-cta{
+        flex: 1;
+        .cta-text{
+
+            color:componentes.$color-principal;
+
+        }
+        .home-tittle{
+            width: 25.5rem;
+            font-weight: 600;
+        }
+        .home-text{
+            width: 26rem;
+            font-weight: 600;
+            word-spacing: 0.5rem;
+            margin-top: 1rem;
+        }
+        .home-input{
+            .input-col{
+                max-width: 200px;
+            }
+        }
+        
+    }
+}
+
+.sec-feature{
+    @include section-display();
+    .intro{
+        text-align: center;
+        h3{
+            font-size: 1.8rem;
+        }
+        p{
+            color: #888;
+        }
+
+    }
+    .features{
+        display: flex;
+      
+      
+        .text{
+          max-width: 40%;
+          padding: 2rem 0;
+
+            .feature{
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+             
+                .description{
+                        margin-left: 1.15rem;
+
+                    .description-tittle{
+                        font-size: 1.25rem;
+                        
+
+                       
+
+                    }
+                    
+
+                }
+            }
+
+        }
+        .img{
+           max-width: 60%;
+           
+          
+        }
+    }
+    
+}
+
+.sec-benefits{
+    border-top: 1px solid #ddd;
+    width:100%;
+   
+   
+   
+   
+
+    .benefits-intro{
+        text-align: center;
+        margin-top: 2.5rem;
+        
+        .benefits-tittle{
+            font-size: 1.8rem;
+
+        }
+        .benefits-text{
+            color: #888;
+            
+
+        }
+    }
+    .container-benefits{
+       width: 100%;
+       padding: 0 2rem 2rem 2rem;
+        
+        
+
+    }
+    
+}
+
+.sec-kpis{
+    width: 100%;
+    background: componentes.$color-principal;
+    padding: 3rem;
+   
+    .container-kpis{
+        
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+       
+        .kpis{
+            .kpis-tittle{
+                color: white;
+                font-weight: 700;
+                font-size: 3rem;
+            }
+            .kpis-text{
+                color: white;
+            }
+        }
+
+    }
+}
+
+.sec-onboarding{
+    width: 100%;
+   max-width: 992px;
+    margin: 0 auto;
+    .onboarding-intro{
+       text-align: center;
+       padding: 2rem 0;
+        .onboarding-tittle{
+            font-size: 1.8rem;
+
+        }
+        .onboarding-text{
+            color: #888;
+
+        }
+
+
+    }
+    .container-onboarding{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       padding: 3rem;
+        .separator{
+         flex: 1;
+            border-bottom: 1px solid #ddd;
+
+        }
+       
+        
+    }
+    
+}
+
+.sec-footer-cta{
+    width: 100%;
+   
+    background-color: #F4F7FE;
+    display: flex;
+    margin: 2rem 0 0 0;
+   
+    .container-footer{
+        padding: 5rem;
+        padding: 5rem;
+       
+        flex: 1;
+      
+        .footer-intro{
+            width: 300px;
+            .footer-tittle{
+                font-weight: 650;
+                font-size: 1.8rem;
+
+
+            }
+            .footer-text{
+                color: #888;
+            }
+          
+           
+            
+        }
+        
+    }
+    .footer-img {
+           
+
+    }
+}
+
+@media (max-width:768px){
+    .sec-feature{
+        .features{
+            .text{
+                max-width: 100%;
+            }
+        }
+    }
+    .sec-onboarding{
+        .container-onboarding{
+            flex-direction: column;
+        }
+    }
+
+    .sec-benefits{
+        .container-benefits{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+   
+}
